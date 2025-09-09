@@ -1,0 +1,23 @@
+Zero-shot classification and text classification are both methods used to categorize text, but they differ significantly in their reliance on labeled training data for the target classes.
+Text Classification (Supervised):
+Definition:
+Traditional text classification involves training a model on a dataset where each text instance is explicitly labeled with its corresponding category. The model learns to associate specific linguistic patterns and features with these predefined categories.
+Training Data:
+Requires a substantial amount of labeled training data for all the classes the model is expected to classify.
+Generalization:
+The model's ability to classify new, unseen text is directly tied to its exposure to similar examples during training. It struggles with, or cannot classify, text belonging to categories it has not encountered during training.
+Examples:
+Sentiment analysis trained on positive/negative/neutral reviews, spam detection trained on labeled spam/non-spam emails, topic classification trained on news articles categorized by subject.
+Zero-Shot Classification:
+Definition:
+Zero-shot classification is a technique that allows a model to classify text into categories it has never seen during training, without requiring labeled examples for those specific categories.
+Training Data:
+Does not require labeled data for the target classes. Instead, it leverages pre-trained models (often large language models) that have learned rich semantic representations and can understand the relationship between text and class descriptions.
+Generalization:
+Achieves generalization by understanding the semantic meaning of the text and the descriptions of the target classes. It can infer the correct category based on this semantic understanding, even for novel classes.
+Mechanism:
+Typically involves embedding both the input text and the candidate class labels into a shared semantic space. The classification is then performed by finding the label whose embedding is most similar to the text's embedding.
+Examples:
+Classifying news articles into emerging topics not present in the original training data, categorizing customer feedback into new product categories as they are introduced, or identifying the brand of a car in an image based on a textual description of the brand. 
+Key Difference:
+The fundamental distinction lies in the requirement for labeled training data for the target classes. Traditional text classification is supervised and requires this data, while zero-shot classification is unsupervised in this regard, relying on pre-trained knowledge and semantic understanding to classify unseen categories. This makes zero-shot classification particularly valuable in scenarios with dynamic class sets or limited labeling resources.
